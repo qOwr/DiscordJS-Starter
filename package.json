@@ -1,0 +1,145 @@
+{
+  "name": "discordjsstarter",
+  "description": "A Discord.js Bot Template",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/helpers/deployCommands.js",
+    "start-server": "pm2 start ecosystem.config.js",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "discord-api-types": "^0.36.1",
+    "discord.js": "^13.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "npm-check-updates": "^15.2.1",
+    "pm2": "^5.2.0",
+    "replace": "^1.2.1",
+    "standard-version": "^9.5.0"
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "replace '### \\[' '## [' CHANGELOG.md"
+    }
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021
+    },
+    "rules": {
+      "arrow-spacing": [
+        "warn",
+        {
+          "before": true,
+          "after": true
+        }
+      ],
+      "brace-style": [
+        "error",
+        "stroustrup",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "comma-spacing": "error",
+      "comma-style": "error",
+      "curly": [
+        "error",
+        "multi-line",
+        "consistent"
+      ],
+      "dot-location": [
+        "error",
+        "property"
+      ],
+      "handle-callback-err": "off",
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "keyword-spacing": "error",
+      "max-nested-callbacks": [
+        "error",
+        {
+          "max": 4
+        }
+      ],
+      "max-statements-per-line": [
+        "error",
+        {
+          "max": 2
+        }
+      ],
+      "no-console": "off",
+      "no-empty-function": "error",
+      "no-floating-decimal": "error",
+      "no-inline-comments": "error",
+      "no-lonely-if": "error",
+      "no-multi-spaces": "error",
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2,
+          "maxEOF": 1,
+          "maxBOF": 0
+        }
+      ],
+      "no-shadow": [
+        "error",
+        {
+          "allow": [
+            "err",
+            "resolve",
+            "reject"
+          ]
+        }
+      ],
+      "no-trailing-spaces": [
+        "error"
+      ],
+      "no-var": "error",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "prefer-const": "error",
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "space-before-blocks": "error",
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "space-in-parens": "error",
+      "space-infix-ops": "error",
+      "space-unary-ops": "error",
+      "spaced-comment": "error",
+      "yoda": "error"
+    }
+  }
+}
