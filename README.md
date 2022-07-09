@@ -1,6 +1,11 @@
 # DiscordJS-Starter
 A template repository for quick discordjs bot setup.
 
+## Features:
+- [pm2](https://pm2.keymetrics.io/) for auto-restarts and 24/7 bot upkeep.
+- [standard-version](https://www.npmjs.com/package/standard-version) for automatic changelogging.
+- Basic event/command setup.
+
 ## How To Setup:
 1. Fork repo.
 2. run `npm install`.
