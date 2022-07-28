@@ -16,12 +16,11 @@ const rest = new REST({ version: '9' }).setToken(token);
 (async () => {
     try {
         await rest.put(
-        Routes.applicationGuildCommands(clientId, guildId), // <-- Guild version
-        // Routes.applicationCommands(clientId), // <-- Global version
-        { body: commands },
-    );
-
-    console.log('Successfully registered application commands.');
+            Routes.applicationGuildCommands(clientId, guildId), // <-- Guild version
+            // Routes.applicationCommands(clientId), // <-- Global version
+            { body: commands },
+        );
+        console.log('Successfully registered application commands.');
     }
     catch (error) {
         console.error(`deployCommands.js error\n${error}`);
